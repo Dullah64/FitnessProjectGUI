@@ -63,7 +63,7 @@ public class Family extends Member {
     public String toString() {
         if (getexp().getYear() == 2024 && getexp().getMonth() == 1 || getexp().getYear() <= 2023) {
             return
-                    getProfile().getfname() + getProfile().getlname() + ":" + getProfile().getdob() +
+                    getProfile().getfname() + " "+ getProfile().getlname() + ":" + getProfile().getdob() +
                             ", Membership expired " + getexp() +
                             ", Location: " + getlocation().name() + ", " + getlocation().getZipCode() + ", " + getlocation().getCounty() +
                             ", " + "(Family)" + " guest-pass remaining: " +" not eligible";

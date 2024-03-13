@@ -78,8 +78,8 @@ public class StudioManager {
             System.out.println("Not Enough Tokens");
             return;
         }
-        String fname = parts[1];
-        String lname = parts[2];
+        String fname = capitalizeFirstLetter(parts[1]);
+        String lname = capitalizeFirstLetter(parts[2]);
         String dob = parts[3];
         String loc = parts[4];
         Date dob1 = parseDateOfBirth(dob);
@@ -108,6 +108,13 @@ public class StudioManager {
         }
     }
 
+    private String capitalizeFirstLetter(String part) {
+        if (part == null || part.isEmpty()) {
+            return part;
+        }
+        return part.substring(0, 1).toUpperCase() + part.substring(1).toLowerCase();
+    }
+
     // Implement other private methods like processAPMembership, processAFMembership, processCancelMembership, registerForMember, unregisterFromMember, registerAsGuest, unregisterGuest
 
     private boolean isOldEnough(Date dob) {
@@ -126,13 +133,12 @@ public class StudioManager {
     }
 
     private void processAPMembership(String[] parts, MemberList members) {
-        // Implement processAPMembership method based on your requirements
         if (parts.length != 5) {
             System.out.println("Not Enough Tokens");
             return;
         }
-        String fname = parts[1];
-        String lname = parts[2];
+        String fname = capitalizeFirstLetter(parts[1]);
+        String lname = capitalizeFirstLetter(parts[2]);
         String dob = parts[3];
         String loc = parts[4];
         if (dob.contains("x")){
@@ -150,7 +156,7 @@ public class StudioManager {
         }
         Profile profile = new Profile(fname, lname, dob1);
         if (!Location.existsByName(loc.toUpperCase())) {
-            System.out.println("Invalid studio location");
+            System.out.println(loc.toUpperCase()+" Invalid studio location");
             return;
         }
         Location location = Location.valueOf(loc.toUpperCase());
@@ -170,8 +176,8 @@ public class StudioManager {
             System.out.println("Not Enough Tokens");
             return;
         }
-        String fname = parts[1];
-        String lname = parts[2];
+        String fname = capitalizeFirstLetter(parts[1]);
+        String lname = capitalizeFirstLetter(parts[2]);
         String dob = parts[3];
         String loc = parts[4];
         if (dob.contains("x")){
@@ -208,13 +214,12 @@ public class StudioManager {
 
 
     private void processCancelMembership(String[] parts, MemberList members) {
-        // Implement processCancelMembership method based on your requirements
         if (parts.length != 4) {
             System.out.println("Not Enough Tokens");
             return;
         } else {
-            String fname = parts[1];
-            String lname = parts[2];
+            String fname = capitalizeFirstLetter(parts[1]);
+            String lname = capitalizeFirstLetter(parts[2]);
             String dob = parts[3];
             if (dob.contains("x")){
                 System.out.println("DOB " + dob + " is Invalid");
@@ -233,39 +238,99 @@ public class StudioManager {
     }
 
     private void registerForMember(String[] parts, MemberList members, Schedule schedule) {
-        // Implement registerForMember method based on your requirements
         if (parts.length != 7) {
             System.out.println("Not Enough Tokens");
             return;
-        } else {
-            String clas = parts[1];
-            String fnameins = parts[2];
-            String locIns = parts[3];
-            String fname = parts[4];
-            String lname = parts[5];
-            String dob = parts[6];
-            Date dob1 = parseDateOfBirth(dob);
-            Profile pro = new Profile(fname, lname, dob1);
-            Member member = new Member(pro);
-            FitnessClass[] schArray = schedule.getclasses();
-
-            for (int i = 0; i <schArray.length; i++) {
-                if (schArray[i].getoffer().name().equals(clas.toUpperCase()) &&
-                        schArray[i].getIns().name().equals(fnameins.toUpperCase())) {
-                    if (schArray[i].getmembers().contains(member)) {
-                        System.out.println(fname + " " + lname + " is already registered for " +
-                                clas.toUpperCase() + " with " + fnameins.toUpperCase());
-                        return;
-                    } else {
-                        schArray[i].getmembers().add(member);
-                        System.out.println(fname + " " + lname + " is registered for " + clas.toUpperCase() +
-                                " with " + fnameins.toUpperCase() + " at " + locIns.toUpperCase());
-                        return;
-                    }
-                }
-            }
-            System.out.println("Fitness class not on class schedule");
         }
+
+        String clas = parts[1];
+        String fnameins = parts[2].toUpperCase();
+        String locIns = parts[3];
+        String fname = capitalizeFirstLetter(parts[4]);
+        String lname = capitalizeFirstLetter(parts[5]);
+        String dob = parts[6];
+        Date dob1 = parseDateOfBirth(dob);
+        Profile pro = new Profile(fname, lname, dob1);
+        Member member = new Member(pro);
+        FitnessClass[] schArray = schedule.getclasses();
+        Member[] array = members.getmembers();
+        Date today = new Date(2, 25, 2024); // Current date
+
+        // Parsing input and checking existence of instructor and location
+        if (!Instructor.instructorExists(fnameins.toUpperCase())) {
+            System.out.println(fnameins + " - instructor does not exist.");
+            return;
+        }
+
+        if (!Location.existsByName(locIns.toUpperCase())) {
+            System.out.println("Invalid studio location");
+            return;
+        }
+
+        // Checking membership status
+        boolean memberFound = false;
+        String memberHomeStudio = null;
+        String memberClass = null;
+        for (int i = 0; i < members.getsize(); i++) {
+            if (members.contains(member) && dob1.equals(array[i].getProfile().getDob())) {
+                memberFound = true;
+                memberHomeStudio = array[i].getlocation().name();
+                memberClass = array[i].getClass().getSimpleName();
+                Date expireDate = array[i].getexp();
+                if (expireDate != null && (expireDate.getYear() < today.getYear() ||
+                        (expireDate.getYear() == today.getYear() && expireDate.getMonth() < today.getMonth()))) {
+                    System.out.println(fname + " " + lname + "'s membership has expired.");
+                    return;
+                }
+                break;
+            }
+        }
+
+        // If member not found in the loop, print message
+        if (!memberFound) {
+            System.out.println(fname + " " + lname + " not in Members database");
+            return;
+        }
+
+        int instructorHour = 0;
+        int instructorMinute = 0;
+        for (FitnessClass fitnessClass : schArray) {
+            if (fitnessClass.getIns().name().equals(fnameins.toUpperCase())) {
+                instructorHour = fitnessClass.gettime().gethour();
+                instructorMinute = fitnessClass.gettime().getmin();
+                break;
+            }
+        }
+
+        // Registering for a Fitness Class
+        for (FitnessClass fitnessClass : schArray) {
+            if (fitnessClass.getoffer().name().equals(clas.toUpperCase()) &&
+                    fitnessClass.getIns().name().equals(fnameins.toUpperCase())) {
+                if (fitnessClass.getmembers().contains(member)) {
+                    System.out.println(fname + " " + lname + " is already in the class");
+                    return; // Already in a class
+                }
+
+                // Check for time conflict
+                if (fitnessClass.gettime().gethour() == instructorHour && fitnessClass.gettime().getmin() == instructorMinute &&
+                        !(fitnessClass.getoffer().name().equals(clas.toUpperCase()) &&
+                                fitnessClass.getIns().name().equals(fnameins.toUpperCase()))) {
+                    System.out.println("Time conflict - " + fname + " " + lname + " is in another class held " +
+                            instructorHour + ":" + instructorMinute + " - " + fnameins + ", " + instructorHour + ":" + instructorMinute + ", " +
+                            fitnessClass.getLocation().name());
+                    return; // Time Conflict
+                }
+
+                fitnessClass.getmembers().add(member);
+                System.out.println(fname + " " + lname + " is attending a class at " + locIns.toUpperCase() +
+                        " home studio at " + memberHomeStudio);
+                System.out.println(fname + " " + lname + " attendence recorded " + clas+" at " + locIns );
+                return; // Adding to the class
+            }
+        }
+
+        // If fitness class not found
+        System.out.println("Fitness class not on class schedule");
     }
 
     private void unregisterFromMember(String[] parts, Schedule schedule) {
@@ -274,9 +339,9 @@ public class StudioManager {
             System.out.println("Not Enough Tokens");
             return;
         } else {
-            String fname = parts[1];
-            String lname = parts[2];
-            String dob = parts[3];
+            String fname = capitalizeFirstLetter(parts[1]);
+            String lname = capitalizeFirstLetter(parts[2]);
+            String dob = parts[3].toUpperCase();
             Date dob1 = parseDateOfBirth(dob);
             Profile pro = new Profile(fname, lname, dob1);
             Member member = new Member(pro);
@@ -302,8 +367,8 @@ public class StudioManager {
             String clas = parts[1];
             String fnameins = parts[2];
             String locIns = parts[3];
-            String fname = parts[4];
-            String lname = parts[5];
+            String fname = capitalizeFirstLetter(parts[4]);
+            String lname = capitalizeFirstLetter(parts[5]);
             String dob = parts[6];
             Date dob1 = parseDateOfBirth(dob);
             Profile pro = new Profile(fname, lname, dob1);
@@ -338,8 +403,8 @@ public class StudioManager {
             String clas = parts[1];
             String fnameins = parts[2];
             String locIns = parts[3];
-            String fname = parts[4];
-            String lname = parts[5];
+            String fname = capitalizeFirstLetter(parts[4]);
+            String lname = capitalizeFirstLetter(parts[5]);
             String dob = parts[6];
             Date dob1 = parseDateOfBirth(dob);
             Profile pro = new Profile(fname, lname, dob1);
@@ -347,7 +412,7 @@ public class StudioManager {
             FitnessClass[] schArray = schedule.getclasses();
             Location loc2 = Location.valueOf(locIns.toUpperCase());
 
-            for (int i = 0; i <schArray.length; i++) {
+            for (int i = 0; i < schArray.length; i++) {
                 if (schArray[i].getoffer().name().equals(clas.toUpperCase()) &&
                         schArray[i].getIns().name().equals(fnameins.toUpperCase())) {
                     if (schArray[i].getguests().contains(member)) {

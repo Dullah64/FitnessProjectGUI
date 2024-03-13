@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10284177-379d-4e22-91bf-d393de06a739" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ProjectFitness/StudioManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ProjectFitness/hello-view.fxml" afterDir="false" />
+    <list default="true" id="10284177-379d-4e22-91bf-d393de06a739" name="Changes" comment="Project SETUP">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/Family.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/Family.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/MemberList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/MemberList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ProjectFitness/hello-view.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +49,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
+    "Application.RunProject2.executor": "Run",
     "Application.StudioManagerController.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -66,7 +58,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "R:/Project3/FitnessProjectGUI/src/main/java/org/example/fitnessprojectgui",
-    "last_opened_file_path": "R:/Project3/FitnessProjectGUI/src/main/resources/ProjectFitness",
+    "last_opened_file_path": "R:/Project3/FitnessProjectGUI",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -76,6 +68,29 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="R:\Project3\FitnessProjectGUI\src\main\resources\ProjectFitness" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ProjectFitness" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="RunProject2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProjectFitness.RunProject2" />
+      <module name="FitnessProjectGUI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProjectFitness.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RunProject2" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -93,6 +108,19 @@
       <option name="presentableId" value="Default" />
       <updated>1709871816448</updated>
     </task>
+    <task id="LOCAL-00001" summary="Project SETUP">
+      <option name="closed" value="true" />
+      <created>1710190198756</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710190198756</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Project SETUP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project SETUP" />
   </component>
 </project>
