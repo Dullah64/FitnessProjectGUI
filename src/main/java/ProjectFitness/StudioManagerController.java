@@ -13,7 +13,7 @@ public class StudioManagerController extends Application  {
 //    It represents the entire window that you see on your screen
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StudioManagerController.class.getResource("StudioManagerView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+        Scene scene = new Scene(fxmlLoader.load(), 500, 500);
         //  A scene represents the content inside the window (or stage). It's what you see inside the window -
         //  all the buttons, text fields, images, etc. that make up the user interface
         stage.setTitle("FitnessClub");
