@@ -157,47 +157,48 @@ public class MemberList {
             String fname = parts[1];
             String lname = parts[2];
             String dob = parts[3];
-            String [] dobparts = dob.split("/");
+            String[] dobparts = dob.split("/");
             int dobmonth = Integer.parseInt(dobparts[0]);
             int dobday = Integer.parseInt(dobparts[1]);
             int dobyear = Integer.parseInt(dobparts[2]);
             String exp = parts[4];
-            String [] expparts = exp.split("/");
+            String[] expparts = exp.split("/");
             int expmonth = Integer.parseInt(expparts[0]);
             int expday = Integer.parseInt(expparts[1]);
             int expyear = Integer.parseInt(expparts[2]);
             String loc = parts[5];
 
-            if (memType.equals("B")){
-                Date dob1 = new Date(dobmonth,dobday,dobyear);
-                Date expire = new Date(expmonth,expday,expyear);
-                Profile profile = new Profile(fname,lname, dob1);
+            if (memType.equals("B")) {
+                Date dob1 = new Date(dobmonth, dobday, dobyear);
+                Date expire = new Date(expmonth, expday, expyear);
+                Profile profile = new Profile(fname, lname, dob1);
                 Location location = Location.valueOf(loc);
-                Basic basic1 = new  Basic(profile,expire,location);
+                Basic basic1 = new Basic(profile, expire, location);
                 add(basic1);
 
             }
-            if (memType.equals("P")){
-                Date dob1 = new Date(dobmonth,dobday,dobyear);
-                Date expire = new Date(expmonth,expday,expyear);
-                Profile profile = new Profile(fname,lname, dob1);
+            if (memType.equals("P")) {
+                Date dob1 = new Date(dobmonth, dobday, dobyear);
+                Date expire = new Date(expmonth, expday, expyear);
+                Profile profile = new Profile(fname, lname, dob1);
                 Location location = Location.valueOf(loc);
-                Premium pre1 = new Premium(profile,expire,location);
+                Premium pre1 = new Premium(profile, expire, location);
                 add(pre1);
             }
-            if (memType.equals("F")){
-                Date dob1 = new Date(dobmonth,dobday,dobyear);
-                Date expire = new Date(expmonth,expday,expyear);
-                Profile profile = new Profile(fname,lname, dob1);
+            if (memType.equals("F")) {
+                Date dob1 = new Date(dobmonth, dobday, dobyear);
+                Date expire = new Date(expmonth, expday, expyear);
+                Profile profile = new Profile(fname, lname, dob1);
                 Location location = Location.valueOf(loc);
-                Family family1 = new Family(profile,expire,location);
+                Family family1 = new Family(profile, expire, location);
                 add(family1);
 
             }
-           count = count + 1;
+            count = count + 1;
+//        }
+//        for (int i = 0; i <this.size; i++){
+//            System.out.println(this.members[i]);        }
         }
-        for (int i = 0; i <this.size; i++){
-            System.out.println(this.members[i]);        }
     }
 
     /**
