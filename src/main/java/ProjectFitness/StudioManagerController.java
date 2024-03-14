@@ -2,32 +2,75 @@ package ProjectFitness;
 
 import static javafx.application.Application.launch;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-public class StudioManagerController extends Application  {
-
-    @Override
-//    It's the top-level container that holds everything.
-//    It represents the entire window that you see on your screen
-    public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(StudioManagerController.class.getResource("StudioManagerView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 500, 500);
-        //  A scene represents the content inside the window (or stage). It's what you see inside the window -
-        //  all the buttons, text fields, images, etc. that make up the user interface
-        stage.setTitle("FitnessClub");
-        stage.setScene(scene);
-        stage.show();
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 
+public class StudioManagerController {
+    private Schedule schedule;
+    private MemberList member;
+    @FXML
+    private TextArea resultText;
+    @FXML
+    private TextField firstName;
+    @FXML
+    private TextField lastName;
+    @FXML
+    private DatePicker dob;
+    @FXML
+    private TextField guest_pass;
+    @FXML
+    private RadioButton BasicButton;
+    @FXML
+    private RadioButton FamilyButton;
+    @FXML
+    private RadioButton PremiumButton;
+    @FXML
+    private RadioButton BridgewaterButton;
+    @FXML
+    private RadioButton SomervilleButton;
+    @FXML
+    private RadioButton PiscatawayButton;
+    @FXML
+    private RadioButton FranklinButton;
+    @FXML
+    private RadioButton EdisonButton;
+    @FXML
+    private RadioButton CardioButton;
+    @FXML
+    private RadioButton PilatesButton;
+    @FXML
+    private RadioButton SpinningButton;
+    @FXML
+    private RadioButton JenniferButton;
+    @FXML
+    private RadioButton DavisButton;
+    @FXML
+    private RadioButton KimButton;
+    @FXML
+    private RadioButton DeniseButton;
+    @FXML
+    private RadioButton EmmaButton;
+    @FXML
+    MenuItem showSchedule;
+    @FXML
+    MenuItem showAttendees;
+    @FXML
+    MenuItem showStudioLocations;
+    @FXML
+    MenuItem printByProfile;
+    @FXML
+    MenuItem printbyCountyZipcode;
+    @FXML
+    MenuItem printwithNextDues;
 
-    }
 
-
-
-
-    public static void main(String[] args) {
-        launch();
-    }
 }
