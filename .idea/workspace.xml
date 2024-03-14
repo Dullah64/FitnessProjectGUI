@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="10284177-379d-4e22-91bf-d393de06a739" name="Changes" comment="Fxml changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/RunProject2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/RunProject2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ProjectFitness/StudioManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ProjectFitness/StudioManagerView.fxml" afterDir="false" />
     </list>
@@ -28,7 +30,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -55,7 +57,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "R:/Project3/FitnessProjectGUI/src/main/java/org/example/fitnessprojectgui",
-    "last_opened_file_path": "C:/Users/great/Downloads/Project3-master",
+    "last_opened_file_path": "R:/Fitness Club Project",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
