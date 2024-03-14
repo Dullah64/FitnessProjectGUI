@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10284177-379d-4e22-91bf-d393de06a739" name="Changes" comment="Fxml changes">
+    <list default="true" id="10284177-379d-4e22-91bf-d393de06a739" name="Changes" comment="Need to fix load method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/MemberList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/MemberList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ProjectFitness/StudioManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ProjectFitness/StudioManagerView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +47,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
+    "Application.MemberList.executor": "Run",
+    "Application.StudioManager.executor": "Run",
     "Application.StudioManagerController.executor": "Run",
     "Application.StudioManagerMain.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -69,6 +71,32 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.StudioManagerMain">
+    <configuration name="MemberList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProjectFitness.MemberList" />
+      <module name="FitnessProjectGUI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProjectFitness.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudioManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProjectFitness.StudioManager" />
+      <module name="FitnessProjectGUI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProjectFitness.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StudioManagerController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ProjectFitness.StudioManagerController" />
       <module name="FitnessProjectGUI" />
@@ -98,6 +126,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.StudioManagerMain" />
+        <item itemvalue="Application.StudioManager" />
+        <item itemvalue="Application.MemberList" />
         <item itemvalue="Application.StudioManagerController" />
       </list>
     </recent_temporary>
@@ -134,11 +164,35 @@
       <option name="project" value="LOCAL" />
       <updated>1710439089925</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Need to fix load method">
+      <option name="closed" value="true" />
+      <created>1710443551397</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710443551397</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fxml changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fxml changes" />
+    <MESSAGE value="Need to fix load method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Need to fix load method" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerMain.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

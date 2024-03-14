@@ -19,7 +19,6 @@ import java.util.Scanner;
 
 public class StudioManagerController {
     MemberList members = new MemberList();
-    Member[] membersarray = members.getmembers();
     Schedule schedule = new Schedule();
 
     @FXML
@@ -137,6 +136,7 @@ public class StudioManagerController {
                 if (selectedFile != null) {
 
                     members.load(selectedFile);
+                    Member[] membersarray = members.getmembers();
                     //  Output Members
                     for (int i = 0; i < members.getsize(); i++){ // change this magic number
                         commandline2.appendText(membersarray[i].toString() + "\n");}
