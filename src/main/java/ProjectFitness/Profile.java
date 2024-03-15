@@ -105,7 +105,7 @@ public class Profile implements Comparable<Profile> {
             Profile pro = (Profile) obj;
             return pro.getfname().equals(this.fname) &&
                     pro.getlname().equals(this.lname) &&
-                    pro.getdob().equals(this.dob);
+                   pro.getdob().equals(this.dob);
         }
         return false;
     }

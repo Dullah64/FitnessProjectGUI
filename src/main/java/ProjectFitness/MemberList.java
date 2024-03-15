@@ -142,6 +142,7 @@ public class MemberList {
     }
 
 
+
     /**
      * Loads member data from a text file.
      * @param file The file to load data from.

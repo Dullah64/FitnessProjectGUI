@@ -48,7 +48,7 @@
                                     <children>
                                         <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="450.0">
                                             <children>
-                                                <DatePicker fx:id="DatePicker" prefHeight="30.0" prefWidth="195.0" />
+                                                <DatePicker fx:id="DatePicker1" prefHeight="30.0" prefWidth="195.0" />
                                                 <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="51.0" prefWidth="258.0">
                                                     <children>
                                                         <Button fx:id="cancelmembership" alignment="CENTER" mnemonicParsing="false" onAction="#cancelmembership" prefHeight="34.0" prefWidth="178.0" text="Cancel Existing Membership" textAlignment="CENTER" />
