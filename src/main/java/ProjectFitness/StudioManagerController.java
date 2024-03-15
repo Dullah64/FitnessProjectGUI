@@ -7,10 +7,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -36,12 +38,13 @@ public class StudioManagerController {
     @FXML
             private Button addmember;
     @FXML
-    private TextArea commandline;
-
+    private TextArea commandline2; // for the output area in memebership tab..
+    @FXML
+    private Button loadMembers; // to load the member list in the membershiptab
     String fname;
     String lname;
     String dob;
-    int numberofGuestPasses;
+    int numberGuest;
 
     @FXML   // Getting MemberShip Type Radio Buttons
     private RadioButton rbbasic, rbfamily, rbpremium;
@@ -82,15 +85,15 @@ public class StudioManagerController {
             Profile profile = new Profile(fname, lname, dob1);
             Member member = new Member(profile);
             if (members.remove(member)) {
-                System.out.println(fname + " " + lname + " removed.");
+                commandline2.appendText(fname + " " + lname + " removed." + "\n");
             } else {
-                System.out.println(fname + " " + lname + " not in database.");
+                commandline2.appendText(fname + " " + lname + " not in database." +"\n");
             }
 
         }
 
 
-        public void addmember(ActionEvent event){ // Add conditions including guest part..
+        public void addmember(ActionEvent event) { // Add conditions including guest part..
             fname = firstnameinput.getText();
             lname = lastnameinput.getText();
             dob = DatePicker.getValue().toString();
@@ -99,44 +102,57 @@ public class StudioManagerController {
             String numberGuest = guest.getText(); // Number of guest Passes..
 
 
-
-
-
             Date dob1 = parseDateOfBirth(dob);
             Location loc = Location.valueOf(getHomeLocation().toUpperCase());
-            Date exp = new Date(4,14,2024);
+            Date exp = new Date(4, 14, 2024);
             Profile profile = new Profile(fname, lname, dob1);
 
             if (!isOldEnough(dob1)) {
-                System.out.println("DOB " + dob1 + ": must be 18 or older to join!");
+                commandline2.appendText("DOB " + dob1 + ": must be 18 or older to join!" + "\n");
             }
 
-            if (getMemberShipType().equals("Basic")){
-                Basic basic = new Basic(profile,exp,loc);
+            if (getMemberShipType().equals("Basic")) {
+                Basic basic = new Basic(profile, exp, loc);
                 members.add(basic);
-                System.out.println("Member Added");
+                commandline2.appendText("Member Added" + "\n");
             }
-            if (getMemberShipType().equals("Family")){
-                Family family = new Family(profile,exp,loc);
+            if (getMemberShipType().equals("Family")) {
+                Family family = new Family(profile, exp, loc);
                 members.add(family);
             }
-            if (getMemberShipType().equals("Premium")){
-                Premium premium = new Premium(profile,exp,loc);
+            if (getMemberShipType().equals("Premium")) {
+                Premium premium = new Premium(profile, exp, loc);
                 members.add(premium);
             }
+        }
+        @FXML
+            public void loadMembers(ActionEvent event) throws IOException {  // MemberList Button
+                FileChooser fileChooser = new FileChooser();
+                fileChooser.setTitle("Select Members File");
 
+                // Show open file dialog
+                Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+                File selectedFile = fileChooser.showOpenDialog(stage);
+                if (selectedFile != null) {
+
+                    members.load(selectedFile);
+                    Member[] membersarray = members.getmembers();
+                    //  Output Members
+                    for (int i = 0; i < members.getsize(); i++){ // change this magic number
+                        commandline2.appendText(membersarray[i].toString() + "\n");}
+                } else {
+
+                    System.out.println("No file selected.");
+                }
+
+
+
+
+
+
+            }
 
             // Do it here
-
-
-
-
-
-
-
-
-
-    }
         private Date parseDateOfBirth (String dob){
             String[] dobparts = dob.split("-");
             int dobmonth = Integer.parseInt(dobparts[0]);

@@ -194,11 +194,12 @@ public class MemberList {
                 add(family1);
 
             }
-           count = count + 1;
+            count = count + 1;
         }
         for (int i = 0; i <this.size; i++){
             System.out.println(this.members[i]);        }
     }
+
 
     /**
      * Prints the members sorted by county and then by zip code.
