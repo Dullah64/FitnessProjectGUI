@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="10284177-379d-4e22-91bf-d393de06a739" name="Changes" comment="Fxml changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/RunProject2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/RunProject2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ProjectFitness/StudioManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ProjectFitness/StudioManagerView.fxml" afterDir="false" />
     </list>
@@ -27,13 +25,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -45,25 +36,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.StudioManagerController.executor": "Run",
-    "Application.StudioManagerMain.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "R:/Project3/FitnessProjectGUI/src/main/java/org/example/fitnessprojectgui",
-    "last_opened_file_path": "R:/Fitness Club Project",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StudioManagerController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StudioManagerMain.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;R:/Project3/FitnessProjectGUI/src/main/java/org/example/fitnessprojectgui&quot;,
+    &quot;last_opened_file_path&quot;: &quot;R:/Fitness Club Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="R:\Project3\FitnessProjectGUI\src\main\resources\ProjectFitness" />
