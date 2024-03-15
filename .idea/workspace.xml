@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10284177-379d-4e22-91bf-d393de06a739" name="Changes" comment="Need to fix load method">
+    <list default="true" id="10284177-379d-4e22-91bf-d393de06a739" name="Changes" comment="Load Method done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/MemberList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/MemberList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,13 +169,22 @@
       <option name="project" value="LOCAL" />
       <updated>1710443551397</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Load Method done">
+      <option name="closed" value="true" />
+      <created>1710455976146</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710455976146</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fxml changes" />
     <MESSAGE value="Need to fix load method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Need to fix load method" />
+    <MESSAGE value="Load Method done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Load Method done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -187,11 +193,6 @@
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerMain.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
