@@ -50,6 +50,8 @@ public class StudioManagerController {
     private Button locationView;
     @FXML
     private TextArea locationText;
+    @FXML
+            private TextArea demoMembersText;
     String fname;
     String lname;
     String dob;
@@ -205,6 +207,21 @@ public class StudioManagerController {
         }
 
     }
+    public void sortByCounty(ActionEvent e){
+        members.printByMember();
+        Member[] array = members.getmembers();
+        StringBuilder sortedMembersText = new StringBuilder();
+        sortedMembersText.append("*Members sorted by profile code*\n");
+        for (int i = members.getsize() - 1; i >= 0; i--) {
+            if (array[i] != null) {
+                sortedMembersText.append(array[i]).append("\n");
+            }
+        }
+        // Assuming county is your text area
+        county.appendText(sortedMembersText.toString());
+    }
+
+
 
 
     private Date parseDateOfBirth(String dob) {

@@ -253,13 +253,6 @@ public class MemberList {
                 }
             }
         }
-
-        System.out.println("*Members sorted by profile code*");
-        for (int i = this.size - 1; i >= 0; i--) {
-            if (this.members[i] != null) {
-                System.out.println(this.members[i]);
-            }
-        }
     }
 
     /**

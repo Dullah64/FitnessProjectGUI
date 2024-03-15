@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10284177-379d-4e22-91bf-d393de06a739" name="Changes" comment="Updated">
+    <list default="true" id="10284177-379d-4e22-91bf-d393de06a739" name="Changes" comment="View Locations Done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/MemberList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/MemberList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ProjectFitness/StudioManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ProjectFitness/StudioManagerView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710484209970</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="View Locations Done">
+      <option name="closed" value="true" />
+      <created>1710517550134</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710517550134</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -212,7 +220,8 @@
     <MESSAGE value="Load Method done" />
     <MESSAGE value="First Tab Done" />
     <MESSAGE value="Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
+    <MESSAGE value="View Locations Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="View Locations Done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
