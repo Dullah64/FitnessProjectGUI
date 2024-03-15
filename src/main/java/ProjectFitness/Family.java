@@ -65,7 +65,7 @@ public class Family extends Member {
             return
                     getProfile().getfname() + " "+ getProfile().getlname() + ":" + getProfile().getdob() +
                             ", Membership expired " + getexp() +
-                            ", Location: " + getlocation().name() + ", " + getlocation().getZipCode() + ", " + getlocation().getCounty() +
+                            ", Location: " + getlocation().name() + ", 0" + getlocation().getZipCode() + ", " + getlocation().getCounty() +
                             ", " + "(Family)" + " guest-pass remaining: " +" not eligible";
         } else {
             if(guest) {
@@ -73,14 +73,14 @@ public class Family extends Member {
 
                         getProfile().getfname() + getProfile().getlname() + ":" + getProfile().getdob() +
                                 ", Membership expires " + getexp() +
-                                ", Location: " + getlocation().name() + ", " + getlocation().getZipCode() + ", " + getlocation().getCounty() +
+                                ", Location: " + getlocation().name() + ", 0" + getlocation().getZipCode() + ", " + getlocation().getCounty() +
                                 ", " + "(Premium)" + " guest-pass remaining: " + NUMBER_GUEST_PASS;
 
             } else {
                 return
                 getProfile().getfname() + " " + getProfile().getlname() + ":" + getProfile().getdob() +
                         ", Membership expires " + getexp() +
-                        ", Location: " + getlocation().name() + ", " + getlocation().getZipCode() + ", " + getlocation().getCounty() +
+                        ", Location: " + getlocation().name() + ", 0" + getlocation().getZipCode() + ", " + getlocation().getCounty() +
                         ", " + "(Premium)" + " guest-pass remaining: " + "0";
 
 

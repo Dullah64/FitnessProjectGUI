@@ -51,7 +51,13 @@ public class StudioManagerController {
     @FXML
     private TextArea locationText;
     @FXML
-            private TextArea demoMembersText;
+    private TextArea demoMembersText;
+    @FXML
+    private Button sortCounty;
+    @FXML
+    private Button sortProfile;
+    @FXML
+    private Button dFees;
     String fname;
     String lname;
     String dob;
@@ -202,24 +208,47 @@ public class StudioManagerController {
     public void viewLocations(ActionEvent e){
         for (Location location : Location.values()) {
             locationText.appendText(location.name() + " : " +
-                    "Zip Code - " + location.getZipCode() + ", " +
+                    "Zip Code - 0" + location.getZipCode() + ", " +
                     "County - " + location.getCounty()+ "\n");
         }
 
     }
     public void sortByCounty(ActionEvent e){
+        members.printByCounty();
+        Member[] array = members.getmembers();
+        StringBuilder sortedMembersText = new StringBuilder();
+        sortedMembersText.append("*Members sorted by County*\n");
+        for (int i = 0; i <members.getsize(); i++) {
+            if (array[i] != null) {
+                sortedMembersText.append(array[i]).append("\n");
+            }
+        }
+        demoMembersText.appendText(sortedMembersText.toString());
+    }
+    public void sortByProfile(ActionEvent e){
         members.printByMember();
         Member[] array = members.getmembers();
         StringBuilder sortedMembersText = new StringBuilder();
-        sortedMembersText.append("*Members sorted by profile code*\n");
+        sortedMembersText.append("*Members sorted by Profile*\n");
         for (int i = members.getsize() - 1; i >= 0; i--) {
             if (array[i] != null) {
                 sortedMembersText.append(array[i]).append("\n");
             }
         }
-        // Assuming county is your text area
         demoMembersText.appendText(sortedMembersText.toString());
     }
+    public void ByFees(ActionEvent e) {
+        members.printFees();
+        Member[] array = members.getmembers();
+        demoMembersText.appendText("*List of members with next dues*\n");
+        for (int i = 0; i < members.getsize(); i++) {
+            if (array[i] == null) {
+                break;
+            }
+            demoMembersText.appendText(array[i] + " " + "[next due: $" + array[i].bill() + "]"+"\n");
+        }
+    }
+
 
 
 

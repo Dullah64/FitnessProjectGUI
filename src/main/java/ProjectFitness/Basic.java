@@ -70,7 +70,7 @@ public class Basic extends Member {
             return
                     getProfile().getfname() + " " + getProfile().getlname() + ":" + getProfile().getdob() +
                             ", Membership expires " + getexp() +
-                            ", Location: " + getlocation().name() + ", " + getlocation().getZipCode() + ", " + getlocation().getCounty() +
+                            ", Location: " + getlocation().name() + ", 0" + getlocation().getZipCode() + ", " + getlocation().getCounty() +
                             ", " + "(Basic)" + " number of classes attended: " + this.numClasses;
         }
 

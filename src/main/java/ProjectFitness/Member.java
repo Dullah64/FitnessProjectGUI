@@ -128,7 +128,7 @@ public class Member implements Comparable<Member> {
         return "Member{" +
                 profile.getfname() + " " + profile.getlname() + ":" + profile.getdob() +
                 ", Membership expires " + expire.toString() +
-               ", Location: " + homeStudio.name() + ", " + homeStudio.getZipCode() + ", " + homeStudio.getCounty() +
+               ", Location: " + homeStudio.name() + ", 0" + homeStudio.getZipCode() + ", " + homeStudio.getCounty() +
                 '}';
     }
 }

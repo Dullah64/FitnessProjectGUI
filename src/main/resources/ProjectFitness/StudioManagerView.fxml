@@ -256,10 +256,14 @@
                     <children>
                         <TabPane layoutX="20.0" layoutY="14.0" prefHeight="196.0" prefWidth="510.0" tabClosingPolicy="UNAVAILABLE">
                             <tabs>
-                                <Tab text="Member" />
-                                <Tab text="Fitness Classes">
+                                <Tab text="Members">
                                     <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="80.0" prefWidth="375.0" />
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="80.0" prefWidth="375.0">
+                                 <children>
+                                    <Button fx:id="sortProfile" layoutX="14.0" layoutY="59.0" mnemonicParsing="false" onAction="#sortByProfile" text="Sort by Profile" />
+                                    <Button fx:id="sortCounty" layoutX="207.0" layoutY="59.0" mnemonicParsing="false" onAction="#sortByCounty" text="Sort by County" />
+                                    <Button fx:id="dFees" layoutX="417.0" layoutY="59.0" mnemonicParsing="false" onAction="#ByFees" text="Sort by Bills" />
+                                 </children></AnchorPane>
                                     </content>
                                 </Tab>
                                 <Tab text="Other">
@@ -269,7 +273,7 @@
                                 </Tab>
                             </tabs>
                         </TabPane>
-                        <TextArea layoutX="17.0" layoutY="220.0" prefHeight="143.0" prefWidth="520.0" />
+                        <TextArea fx:id="demoMembersText" layoutX="6.0" layoutY="164.0" prefHeight="326.0" prefWidth="598.0" />
                     </children></AnchorPane>
             </content>
         </Tab>
