@@ -67,11 +67,11 @@ public class Basic extends Member {
      */
     @Override
     public String toString() {
-            return
-                    getProfile().getfname() + " " + getProfile().getlname() + ":" + getProfile().getdob() +
-                            ", Membership expires " + getexp() +
-                            ", Location: " + getlocation().name() + ", 0" + getlocation().getZipCode() + ", " + getlocation().getCounty() +
-                            ", " + "(Basic)" + " number of classes attended: " + this.numClasses;
+        return getProfile().getfname() + " " + getProfile().getlname() + " : " +
+                getProfile().getdob() + ", Membership expires " + getexp() +
+                ", Location: " + getlocation().name() + ", 0" + getlocation().getZipCode() +
+                ", " + getlocation().getCounty() + ", (Basic) number of classes attended: " +
+                this.numClasses;
         }
 
     }

@@ -126,7 +126,7 @@ public class Member implements Comparable<Member> {
     @Override
    public String toString() {
         return "Member{" +
-                profile.getfname() + " " + profile.getlname() + ":" + profile.getdob() +
+                profile.getfname() + " " + profile.getlname() + " : " + profile.getdob() +
                 ", Membership expires " + expire.toString() +
                ", Location: " + homeStudio.name() + ", 0" + homeStudio.getZipCode() + ", " + homeStudio.getCounty() +
                 '}';

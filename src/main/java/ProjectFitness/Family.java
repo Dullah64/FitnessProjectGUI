@@ -19,7 +19,7 @@ public class Family extends Member {
 
     public static final double BILLED_QUARTERLY_FAMILY = 3;
     public static final double MONTHLY_FEE = 49.99;
-    public static final double NUMBER_GUEST_PASS = 1;
+    public static final int NUMBER_GUEST_PASS = 1;
 
     /**
      * Constructs a Family membership with the given profile, expiration date, home studio, and guest status.
@@ -63,7 +63,7 @@ public class Family extends Member {
     public String toString() {
         if (getexp().getYear() == 2024 && getexp().getMonth() == 1 || getexp().getYear() <= 2023) {
             return
-                    getProfile().getfname() + " "+ getProfile().getlname() + ":" + getProfile().getdob() +
+                    getProfile().getfname() + " "+ getProfile().getlname() + " : " + getProfile().getdob() +
                             ", Membership expired " + getexp() +
                             ", Location: " + getlocation().name() + ", 0" + getlocation().getZipCode() + ", " + getlocation().getCounty() +
                             ", " + "(Family)" + " guest-pass remaining: " +" not eligible";
@@ -71,17 +71,17 @@ public class Family extends Member {
             if(guest) {
                 return
 
-                        getProfile().getfname() + getProfile().getlname() + ":" + getProfile().getdob() +
+                        getProfile().getfname() +" "+ getProfile().getlname() + " : " + getProfile().getdob() +
                                 ", Membership expires " + getexp() +
                                 ", Location: " + getlocation().name() + ", 0" + getlocation().getZipCode() + ", " + getlocation().getCounty() +
-                                ", " + "(Premium)" + " guest-pass remaining: " + NUMBER_GUEST_PASS;
+                                ", " + "(Family)" + " guest-pass remaining: " + NUMBER_GUEST_PASS;
 
             } else {
                 return
-                getProfile().getfname() + " " + getProfile().getlname() + ":" + getProfile().getdob() +
+                getProfile().getfname() + " " + getProfile().getlname() + " : " + getProfile().getdob() +
                         ", Membership expires " + getexp() +
                         ", Location: " + getlocation().name() + ", 0" + getlocation().getZipCode() + ", " + getlocation().getCounty() +
-                        ", " + "(Premium)" + " guest-pass remaining: " + "0";
+                        ", " + "(Family)" + " guest-pass remaining: " + "0";
 
 
             }

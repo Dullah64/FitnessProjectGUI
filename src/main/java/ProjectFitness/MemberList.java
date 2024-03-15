@@ -197,8 +197,8 @@ public class MemberList {
             }
             count = count + 1;
         }
-        for (int i = 0; i <this.size; i++){
-            System.out.println(this.members[i]);        }
+//        for (int i = 0; i <this.size; i++){
+//            System.out.println(this.members[i]);        }
     }
 
 
@@ -226,13 +226,13 @@ public class MemberList {
             }
         }
 
-        System.out.println("*Members sorted by county/zip code*");
-        for (int i = 0; i < this.size; i++) {
-            if (this.members[i] != null) {
-                System.out.println(this.members[i]);
-            }
-
-        }
+//        System.out.println("*Members sorted by county/zip code*");
+//        for (int i = 0; i < this.size; i++) {
+//            if (this.members[i] != null) {
+//                System.out.println(this.members[i]);
+//            }
+//
+//        }
     }
 
     /**
@@ -259,12 +259,12 @@ public class MemberList {
      * Prints the members fees as is with the next due amount
      */
     public void printFees() { //print the array as is with the next due amounts
-        for (int i = 0; i < this.size; i++){
-            if (this.members[i]== null){
-                break;
-            }
-            System.out.println(this.members[i]+ " " + "[next due: $" + this.members[i].bill() + "]");
-        }
+//        for (int i = 0; i < this.size; i++){
+//            if (this.members[i]== null){
+//                break;
+//            }
+//            System.out.println(this.members[i]+ " " + "[next due: $" + this.members[i].bill() + "]");
+//        }
 
     }
 

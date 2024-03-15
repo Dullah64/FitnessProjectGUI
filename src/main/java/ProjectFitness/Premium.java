@@ -69,13 +69,13 @@ public static final int NUMBER_OF_GUESTS = 3;
     public String toString() {
         if (getexp().getYear() == 2024 && getexp().getMonth() == 1 || getexp().getYear() <= 2023) {
         return
-                getProfile().getfname() + " " + getProfile().getlname() + ":" + getProfile().getdob() +
+                getProfile().getfname() + " " + getProfile().getlname() + " : " + getProfile().getdob() +
                         ", Membership expired " + getexp() +
                         ", Location: " + getlocation().name() + ", 0" + getlocation().getZipCode() + ", " + getlocation().getCounty() +
                         ", " + "(Premium)" + " guest-pass remaining: " +" not eligible";
     }
         return
-                getProfile().getfname() + " " + getProfile().getlname() + ":" + getProfile().getdob() +
+                getProfile().getfname() + " " +getProfile().getlname() + " : " + getProfile().getdob() +
                         ", Membership expires " + getexp() +
                         ", Location: " + getlocation().name() + ", 0" + getlocation().getZipCode() + ", " + getlocation().getCounty() +
                         ", " + "(Premium)" + " guest-pass remaining: " + this.guestPass;
