@@ -8,8 +8,6 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
@@ -245,15 +243,10 @@
         <Tab text="Studio Location">
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                    <children>
-                        <TableView accessibleRole="MENU" editable="true" layoutX="52.0" layoutY="26.0" prefHeight="294.0" prefWidth="490.0">
-                            <columns>
-                                <TableColumn prefWidth="150.66665649414062" text="City" />
-                                <TableColumn prefWidth="184.66668701171875" text="County " />
-                                <TableColumn prefWidth="155.33331298828125" text="Zipcode" />
-                            </columns>
-                        </TableView>
-                    </children>
+               <children>
+                  <TextArea fx:id="locationText" layoutX="4.0" layoutY="3.0" prefHeight="334.0" prefWidth="607.0" />
+                  <Button fx:id="locationView" layoutX="281.0" layoutY="355.0" mnemonicParsing="false" onAction="#viewLocations" text="View Locations" />
+               </children>
                 </AnchorPane>
             </content>
         </Tab>

@@ -43,9 +43,13 @@ public class StudioManagerController {
     @FXML
     private Button loadMembers; // to load the member list in the membershiptab
     @FXML
-            private TextArea commandline1;
+    private TextArea commandline1;
     @FXML
-            private Button loadSchedule;
+    private Button loadSchedule;
+    @FXML
+    private Button locationView;
+    @FXML
+    private TextArea locationText;
     String fname;
     String lname;
     String dob;
@@ -191,6 +195,14 @@ public class StudioManagerController {
             System.out.println("No file selected.");
         }
 
+
+    }
+    public void viewLocations(ActionEvent e){
+        for (Location location : Location.values()) {
+            locationText.appendText(location.name() + " : " +
+                    "Zip Code - " + location.getZipCode() + ", " +
+                    "County - " + location.getCounty()+ "\n");
+        }
 
     }
 
