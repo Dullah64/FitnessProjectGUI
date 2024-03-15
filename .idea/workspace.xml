@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10284177-379d-4e22-91bf-d393de06a739" name="Changes" comment="Load Method done">
+    <list default="true" id="10284177-379d-4e22-91bf-d393de06a739" name="Changes" comment="First Tab Done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ProjectFitness/StudioManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ProjectFitness/StudioManagerView.fxml" afterDir="false" />
     </list>
@@ -186,14 +187,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710472045744</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="First Tab Done">
+      <option name="closed" value="true" />
+      <created>1710482280841</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710482280841</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fxml changes" />
     <MESSAGE value="Need to fix load method" />
     <MESSAGE value="Load Method done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Load Method done" />
+    <MESSAGE value="First Tab Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Tab Done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -202,6 +212,15 @@
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerMain.java</url>
+          <line>21</line>
+          <properties class="ProjectFitness.StudioManagerMain" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

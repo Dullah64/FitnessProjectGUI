@@ -42,6 +42,10 @@ public class StudioManagerController {
     private TextArea commandline2; // for the output area in memebership tab..
     @FXML
     private Button loadMembers; // to load the member list in the membershiptab
+    @FXML
+            private TextArea commandline1;
+    @FXML
+            private Button loadSchedule;
     String fname;
     String lname;
     String dob;
@@ -165,7 +169,32 @@ public class StudioManagerController {
                     System.out.println("No file selected.");
                 }
 
+
     }
+    public void loadSchedule(ActionEvent event) throws IOException {  // MemberList Button
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select Schedule File");
+
+        // Show open file dialog
+        Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        File selectedFile = fileChooser.showOpenDialog(stage);
+        if (selectedFile != null) {
+
+            schedule.load(selectedFile);
+            FitnessClass[] classesarray = schedule.getclasses();
+
+            for (int i = 0; i < classesarray.length; i++){ // change this magic number
+                commandline1.appendText(classesarray[i].toString() + "\n");}
+
+        } else {
+
+            System.out.println("No file selected.");
+        }
+
+
+    }
+
+
     private Date parseDateOfBirth(String dob) {
         String[] dobparts = dob.split("/");
         int dobmonth = Integer.parseInt(dobparts[0].replaceAll("^0+(?!$)", ""));
