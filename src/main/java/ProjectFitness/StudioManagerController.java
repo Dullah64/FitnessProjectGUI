@@ -267,4 +267,15 @@ public class StudioManagerController {
     MenuItem printwithNextDues;
 
 
+    public void addguest(ActionEvent event) {
+    }
+
+    public void removeguest(ActionEvent event) {
+    }
+
+    public void addmembertoclass(ActionEvent event) {
+    }
+
+    public void removememberfromclass(ActionEvent event) {
+    }
 }
