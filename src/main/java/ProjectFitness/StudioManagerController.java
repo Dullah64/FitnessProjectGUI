@@ -218,7 +218,7 @@ public class StudioManagerController {
             }
         }
         // Assuming county is your text area
-        county.appendText(sortedMembersText.toString());
+        demoMembersText.appendText(sortedMembersText.toString());
     }
 
 
