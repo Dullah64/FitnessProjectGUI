@@ -112,18 +112,6 @@ public class Member implements Comparable<Member> {
      */
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-        Member member = (Member) obj;
-        return Objects.equals(profile, member.profile) &&
-               // Objects.equals(expire, member.expire) &&
-                Objects.equals(homeStudio, member.homeStudio);
-    }
-    public boolean equals2(Object obj) {
         if (obj instanceof Member member) {
             return member.profile.equals(this.profile);
         }

@@ -61,7 +61,7 @@ public class MemberList {
      */
     private int find2(Member member) {
         for (int i = 0; i < this.size; i++) {
-            if (this.members[i] != null && this.members[i].equals2(member)) {
+            if (this.members[i] != null && this.members[i].equals(member)) {
                 return i;
             }
         }
@@ -90,7 +90,7 @@ public class MemberList {
      */
     public boolean contains(Member member) {
         for (int i = 0; i < this.size; i++) {
-            if (this.members[i] != null && this.members[i].equals2(member)) {
+            if (this.members[i] != null && this.members[i].equals(member)) {
                 return true;
             }
         }
