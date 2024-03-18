@@ -39,19 +39,25 @@ public int getNumClasses(){
                 //file = new File("classSchedule.txt"); on Studio Manager class//
                 Scanner scanner = new Scanner(file);
                 int count = 0;
-
                 while (scanner.hasNextLine()) {
                         String line = scanner.nextLine();
                         String[] parts = line.split(" ");
-                        Offer offer = Offer.valueOf(parts[0].toUpperCase());
-                        Instructor ins = Instructor.valueOf(parts[1].toUpperCase());
-                        Time time = Time.valueOf(parts[2].toUpperCase()); // Time...
-                        Location studio = Location.valueOf(parts[3].toUpperCase());
-                        FitnessClass obj = new FitnessClass(offer, ins, time, studio);
-                        this.classes[count] = obj;
-                        System.out.println(this.classes[count]);
-                        count++;
-
+                        if (parts.length == 4) {  // Check if the line has enough parts
+                                try {
+                                        Offer offer = Offer.valueOf(parts[0].toUpperCase());
+                                        Instructor ins = Instructor.valueOf(parts[1].toUpperCase());
+                                        Time time = Time.valueOf(parts[2].toUpperCase());
+                                        Location studio = Location.valueOf(parts[3].toUpperCase());
+                                        FitnessClass obj = new FitnessClass(offer, ins, time, studio);
+                                        classes[count] = obj;  // Assuming 'classes' is your array
+                                        count++;
+                                } catch (IllegalArgumentException e) {
+                                        System.err.println("Invalid data in file: " + line);
+                                }
+                        } else {
+                                System.err.println("Invalid line format: " + line);
+                        }
                 }
+                scanner.close();
         }
 }

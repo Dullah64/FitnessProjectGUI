@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="613.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProjectFitness.StudioManagerController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="613.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProjectFitness.StudioManagerController">
     <tabs>
         <Tab text="Membership">
             <content>
@@ -135,19 +122,25 @@
                                 <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="59.0" text="Class" />
                                 <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                                     <children>
-                                        <RadioButton fx:id="CardioButton" alignment="BOTTOM_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="34.0" prefWidth="88.0" text="Cardio" toggleGroup="$homelocation" />
-                                        <RadioButton fx:id="PilatesButton" mnemonicParsing="false" prefHeight="51.0" prefWidth="87.0" text="Pilates" toggleGroup="$homelocation" />
-                                        <RadioButton fx:id="SpinningButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="87.0" text="Spinning" toggleGroup="$homelocation" />
+                                        <RadioButton fx:id="CardioButton" alignment="BOTTOM_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="34.0" prefWidth="88.0" text="Cardio">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="toggleGroup1" />
+                                 </toggleGroup></RadioButton>
+                                        <RadioButton fx:id="PilatesButton" mnemonicParsing="false" prefHeight="51.0" prefWidth="87.0" text="Pilates" toggleGroup="$toggleGroup1" />
+                                        <RadioButton fx:id="SpinningButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="87.0" text="Spinning" toggleGroup="$toggleGroup1" />
                                     </children>
                                 </HBox>
                                 <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="85.0" text="Instructor" GridPane.rowIndex="1" />
                                 <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                     <children>
-                                        <RadioButton fx:id="JenniferButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="86.0" text="Jennifer" toggleGroup="$homelocation" />
-                                        <RadioButton fx:id="DavisButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="87.0" text="Davis" toggleGroup="$homelocation" />
-                                        <RadioButton fx:id="KimButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="87.0" text="Kim" toggleGroup="$homelocation" />
-                                        <RadioButton fx:id="DeniseButton" mnemonicParsing="false" prefHeight="51.0" prefWidth="87.0" text="Denise" toggleGroup="$homelocation" />
-                                        <RadioButton fx:id="EmmaButton" mnemonicParsing="false" prefHeight="52.0" prefWidth="87.0" text="Emma" toggleGroup="$homelocation" />
+                                        <RadioButton fx:id="JenniferButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="86.0" text="Jennifer">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="toggleGroup2" />
+                                 </toggleGroup></RadioButton>
+                                        <RadioButton fx:id="DavisButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="87.0" text="Davis" toggleGroup="$toggleGroup2" />
+                                        <RadioButton fx:id="KimButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="87.0" text="Kim" toggleGroup="$toggleGroup2" />
+                                        <RadioButton fx:id="DeniseButton" mnemonicParsing="false" prefHeight="51.0" prefWidth="87.0" text="Denise" toggleGroup="$toggleGroup2" />
+                                        <RadioButton fx:id="EmmaButton" mnemonicParsing="false" prefHeight="52.0" prefWidth="87.0" text="Emma" toggleGroup="$toggleGroup2" />
                                     </children>
                                 </HBox>
                                 <Label alignment="CENTER" prefHeight="17.0" prefWidth="81.0" text="Location" GridPane.rowIndex="2" />
@@ -155,9 +148,12 @@
                                     <children>
                                         <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="340.0">
                                             <children>
-                                                <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="94.0" text="Bridgewater" toggleGroup="$homelocation" />
-                                                <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="93.0" text="Somerville" toggleGroup="$homelocation" />
-                                                <RadioButton mnemonicParsing="false" text="Piscataway" toggleGroup="$homelocation" />
+                                                <RadioButton fx:id="RBBridgeWater" mnemonicParsing="false" prefHeight="18.0" prefWidth="94.0" text="Bridgewater">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="toggleGroup" />
+                                       </toggleGroup></RadioButton>
+                                                <RadioButton fx:id="RBSomerville" mnemonicParsing="false" prefHeight="18.0" prefWidth="93.0" text="Somerville" toggleGroup="$toggleGroup" />
+                                                <RadioButton fx:id="RBPiscataway" mnemonicParsing="false" text="Piscataway" toggleGroup="$toggleGroup" />
                                             </children>
                                         </HBox>
                                     </children>
@@ -166,8 +162,8 @@
                                     <children>
                                         <HBox prefHeight="53.0" prefWidth="470.0">
                                             <children>
-                                                <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="94.0" text="Franklin" toggleGroup="$homelocation" />
-                                                <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="92.0" text="Edison" toggleGroup="$homelocation" />
+                                                <RadioButton fx:id="RBFranklin" mnemonicParsing="false" prefHeight="18.0" prefWidth="94.0" text="Franklin" toggleGroup="$toggleGroup" />
+                                                <RadioButton fx:id="RBEdison" mnemonicParsing="false" prefHeight="18.0" prefWidth="92.0" text="Edison" toggleGroup="$toggleGroup" />
                                             </children>
                                         </HBox>
                                     </children>
@@ -204,29 +200,29 @@
                                     <children>
                                         <HBox alignment="CENTER" prefHeight="54.0" prefWidth="137.0">
                                             <children>
-                                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addmembertoclass" prefHeight="25.0" prefWidth="94.0" text="Add Member" />
+                                                <Button fx:id="addmembertoclass" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addmembertoclass" prefHeight="25.0" prefWidth="94.0" text="Add Member" />
                                             </children>
                                         </HBox>
                                         <HBox alignment="CENTER" prefHeight="54.0" prefWidth="132.0">
                                             <children>
-                                                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#removememberfromclass" prefHeight="25.0" prefWidth="117.0" text="Remove Member" />
+                                                <Button fx:id="removememberfromclass" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#removememberfromclass" prefHeight="25.0" prefWidth="117.0" text="Remove Member" />
                                             </children>
                                         </HBox>
                                         <HBox alignment="CENTER" prefHeight="54.0" prefWidth="109.0">
                                             <children>
-                                                <Button mnemonicParsing="false" onAction="#addguest" text="Add Guest" />
+                                                <Button fx:id="addguest" mnemonicParsing="false" onAction="#addguest" text="Add Guest" />
                                             </children>
                                         </HBox>
                                         <HBox alignment="CENTER" prefHeight="54.0" prefWidth="97.0">
                                             <children>
-                                                <Button mnemonicParsing="false" onAction="#removeguest" text="Remove Guest" />
+                                                <Button fx:id="removeguest" mnemonicParsing="false" onAction="#removeguest" text="Remove Guest" />
                                             </children>
                                         </HBox>
                                     </children>
                                 </HBox>
                             </children>
                         </GridPane>
-                  <TextArea fx:id="resultText" layoutX="1.0" layoutY="284.0" prefHeight="45.0" prefWidth="594.0" />
+                  <TextArea fx:id="resultText" layoutX="1.0" layoutY="284.0" prefHeight="153.0" prefWidth="594.0" />
                     </children></AnchorPane>
             </content>
         </Tab>
@@ -266,11 +262,28 @@
                                  </children></AnchorPane>
                                     </content>
                                 </Tab>
-                                <Tab text="Other">
-                                    <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                    </content>
-                                </Tab>
+                        <Tab text="FitnessClass">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="139.0" prefWidth="589.0">
+                                 <children>
+                                    <Button fx:id="showSchedule" layoutX="14.0" layoutY="59.0" mnemonicParsing="false" onAction="#loadSchedule" text="Show Schedule" />
+                                    <Button fx:id="showAttendees" layoutX="171.0" layoutY="59.0" mnemonicParsing="false" onAction="#displaySchedule" text="Show Attendees" />
+                                    <Button fx:id="showStudioLocations" layoutX="337.0" layoutY="59.0" mnemonicParsing="false" onAction="#viewLocations" prefHeight="31.0" prefWidth="165.0" text="Show Studio Locations" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Other">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="80.0" prefWidth="375.0">
+                                 <children>
+                                    <Button fx:id="sortProfile2" layoutX="14.0" layoutY="59.0" mnemonicParsing="false" onAction="#sortByProfile" text="Sort by Profile" />
+                                    <Button fx:id="sortCounty2" layoutX="207.0" layoutY="59.0" mnemonicParsing="false" onAction="#sortByCounty" text="Sort by County" />
+                                    <Button fx:id="dFees2" layoutX="417.0" layoutY="59.0" mnemonicParsing="false" onAction="#ByFees" text="Sort by Bills" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
                             </tabs>
                         </TabPane>
                         <TextArea fx:id="demoMembersText" layoutX="6.0" layoutY="164.0" prefHeight="326.0" prefWidth="598.0" />

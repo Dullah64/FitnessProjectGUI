@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10284177-379d-4e22-91bf-d393de06a739" name="Changes" comment="Everything else done. missing class attendence and demo part of class attendence(That's ALL).">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/Basic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/Basic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/Family.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/Family.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/FitnessClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/FitnessClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/MemberList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/MemberList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/Premium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/Premium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/Offer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectFitness/StudioManagerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ProjectFitness/StudioManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ProjectFitness/StudioManagerView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,18 +25,12 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -46,27 +43,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MemberList.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StudioManager.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StudioManagerController.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StudioManagerMain.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;R:/Project3/FitnessProjectGUI/src/main/java/org/example/fitnessprojectgui&quot;,
-    &quot;last_opened_file_path&quot;: &quot;R:/Project3/FitnessProjectGUI&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Application.MemberList.executor": "Run",
+    "Application.StudioManager.executor": "Run",
+    "Application.StudioManagerController.executor": "Run",
+    "Application.StudioManagerMain.executor": "Run",
+    "Attach to process.pid 13700.executor": "ProcessAttachDebug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "R:/Project3/FitnessProjectGUI/src/main/java/org/example/fitnessprojectgui",
+    "last_opened_file_path": "C:/Users/great/Downloads/Project3-master",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.JavaFX"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="R:\Project3\FitnessProjectGUI\src\main\resources\ProjectFitness" />
@@ -258,7 +256,16 @@
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.lang.IllegalArgumentException" memberName="cause" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

@@ -13,6 +13,7 @@ public class FitnessClass {
     private Time time;
     private MemberList members;
     private MemberList guests;
+    private MemberList attendees;
 
     /**
      * Retrieves the offer associated with the class session.
@@ -66,6 +67,11 @@ public class FitnessClass {
      */
     public MemberList getguests() {
         return this.members;
+    }
+    public MemberList getAttendees(){return this.attendees;}
+
+    public void addAttendee(Member member) {
+        attendees.add(member);
     }
 
     /**

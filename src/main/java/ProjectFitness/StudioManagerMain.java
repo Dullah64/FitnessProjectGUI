@@ -12,8 +12,8 @@ public class StudioManagerMain extends Application {
     // GUI is event driven
     public void start(Stage stage) throws IOException { // Create Stage
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("StudioManagerView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+        FXMLLoader fxmlLoader = new FXMLLoader(StudioManagerController.class.getResource("StudioManagerView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 500, 500);
         stage.setTitle("Fitness Club"); // Title
         stage.setScene(scene);
         stage.show(); // Show the Screen

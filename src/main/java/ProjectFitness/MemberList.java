@@ -37,6 +37,7 @@ public class MemberList {
         return members;
     }
 
+
     /**
      * Finds the index of the specified member in the member list.
      * @param member The member to find.
